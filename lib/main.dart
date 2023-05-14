@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uuid/uuid.dart';
-
 import 'classes/info_modal_file.dart';
 
 void main() {
@@ -45,7 +43,7 @@ class Homepage extends StatelessWidget {
       body: ValueListenableBuilder(
           valueListenable: contactBook,
           builder: (context, value, child) {
-            final contacts = value as List<Contact>;
+            final contacts = value;
             return ListView.builder(
               itemCount: contacts.length,
               itemBuilder: (context, index) {
